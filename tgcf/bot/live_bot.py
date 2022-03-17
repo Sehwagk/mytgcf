@@ -121,11 +121,13 @@ async def style_command_handler(event):
         raise events.StopPropagation
 
 
+
 async def start_command_handler(event):
     """Handle the /start command."""
     await event.respond(const.BotMessages.start)
 
 
+@admin_protect
 async def help_command_handler(event):
     """Handle the /help command."""
     await event.respond(const.BotMessages.bot_help)
